@@ -1,7 +1,6 @@
 import java.util.*;
 public class ATM {
     public static void main(String[] args) {
-        ArrayList<Account> acct = new ArrayList<Account>();
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome. What is your name?");
         String name = input.nextLine();
@@ -9,17 +8,14 @@ public class ATM {
         double bal = input.nextDouble();
         System.out.println("What is your starting APR?");
         Credit userCred = new Credit(input.nextInt(), bal);
-        acct.add(userCred);
         System.out.println("What is your checking starting balance?");
         bal = input.nextDouble();
         System.out.println("What is your overdraft fee?");
         Checking userCheck = new Checking(input.nextDouble(), name, bal);
-        acct.add(userCheck);
         System.out.println("What is your savings starting balance?");
         bal = input.nextDouble();
         System.out.println("What is your interest rate?");
         Savings userSave = new Savings(input.nextDouble(), name, bal);
-        acct.add(userSave);
         int count = 0;
         while(count != 4) {
             System.out.println("Which account would you like to access?");
@@ -53,7 +49,7 @@ public class ATM {
                 acct.monthlyStatement();
             } else if (count == 4) {
                 System.out.println("Months to pay off in?");
-                acct.monthsToPayOff(input.nextInt());
+                System.out.println(acct.monthsToPayOff(input.nextInt()) + " months to pay off debt.");
             }
         }
     }

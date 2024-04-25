@@ -8,7 +8,7 @@ public class Account {
         id = randID.nextInt(1,99999);
         balance = 0;
     }
-    public Account(int bal){
+    public Account(double bal){
         id = randID.nextInt(1,99999);
         balance = bal;
     }

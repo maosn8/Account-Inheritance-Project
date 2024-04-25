@@ -4,8 +4,8 @@ public class Bank extends Account{
         super();
         name = "unknown";
     }
-    public Bank(String n){
-        super();
+    public Bank(String n, double b){
+        super(b);
         name = n;
     }
     public String getName(){

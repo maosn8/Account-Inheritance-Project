@@ -4,8 +4,8 @@ public class Credit extends Account{
         super();
         apr = 0;
     }
-    public Credit(double a){
-        super();
+    public Credit(double a, double b){
+        super(b);
         apr = a;
     }
     public void setApr(double a) {
@@ -19,7 +19,7 @@ public class Credit extends Account{
     }
     public void monthlyStatement(){
         System.out.println("Pay on time: " + getBalance());
-        System.out.println("Pay late: " + getBalance()+(getBalance() * (apr / 12)));
+        System.out.println("Pay late: " + (getBalance()+(getBalance() * (apr / 12))));
     }
     public double monthsToPayOff(int m){
         return getBalance()*(((apr/12)*Math.pow(1+(apr/12),m))/(Math.pow(1+(apr/12),m)-1));

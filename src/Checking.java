@@ -4,8 +4,8 @@ public class Checking extends Bank{
         super();
         fee = 0;
     }
-    public Checking(double f){
-        super();
+    public Checking(double f, String name, double b){
+        super(name, b);
         fee = f;
     }
 

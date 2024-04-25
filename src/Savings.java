@@ -4,8 +4,8 @@ public class Savings extends Bank{
         super();
         interest = 0;
     }
-    public Savings(double i){
-        super();
+    public Savings(double i, String name, double b){
+        super(name, b);
         interest = i;
     }
     public double getInterest() {
